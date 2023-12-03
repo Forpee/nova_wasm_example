@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Nova Test in Browser</title>
+</head>
+
+<body>
+  <button onclick="runMinRootExample()">Run MinRoot example</button>
+  <script type="module">
+    import init, { main } from "./pkg/nova_wasm_example.js";
+    init().then(() => {
+      window.runMinRootExample = main;
+    });
+  </script>
+</body>
+
+</html>
